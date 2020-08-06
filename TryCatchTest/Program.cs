@@ -25,29 +25,43 @@ namespace TryCatchTest
 
                     try
                     {
-                        Console.Write("What you want to do? ");
-                        Console.Write("\nPlease enter the operator ( + , -, *, / ): ");
-                        calcOperator = Console.ReadLine();
-                        switch (calcOperator)
+                        bool validOperator = false;
+                        while (validOperator == false)
                         {
-                            case "+":
-                                result = num1 + num2;
-                                break;
+                            Console.Write("What you want to do? ");
+                            Console.Write("\nPlease enter the operator ( + , -, *, / ): ");
+                            calcOperator = Console.ReadLine();
 
-                            case "-":
-                                result = num1 - num2;
-                                break;
+                            switch (calcOperator)
+                            {
+                                case "+":
+                                    validOperator = true;
+                                    result = num1 + num2;
 
-                            case "*":
-                                result = num1 * num2;
-                                break;
+                                    break;
 
-                            case "/":
-                                result = num1 / num2;
-                                break;
+                                case "-":
+                                    validOperator = true;
+                                    result = num1 - num2;
 
-                            default:
-                                break;
+                                    break;
+
+                                case "*":
+                                    validOperator = true;
+                                    result = num1 * num2;
+
+                                    break;
+
+                                case "/":
+                                    validOperator = true;
+                                    result = num1 / num2;
+                                    break;
+
+                                default:
+                                    validOperator = false;
+                                    Console.WriteLine("Please enter a valid Operator.");
+                                    break;
+                            }
                         }
                     }
                     catch (Exception e)
@@ -82,6 +96,7 @@ namespace TryCatchTest
                             {
                                 restart = true;
                                 isValid = true;
+                                Console.WriteLine("See you.");
                             }
                             else
                             {
