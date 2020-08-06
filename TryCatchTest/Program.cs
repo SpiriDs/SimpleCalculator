@@ -58,7 +58,7 @@ namespace TryCatchTest
                                     break;
 
                                 default:
-                                    validOperator = false;
+                                    //validOperator = false;
                                     Console.WriteLine("Please enter a valid Operator.");
                                     break;
                             }
@@ -100,7 +100,8 @@ namespace TryCatchTest
                             }
                             else
                             {
-                                restart = true;
+                                Console.WriteLine("Please enter only \'y\' or \'n\'");
+                                restart = false;
                             }
                         }
                         catch (Exception e)
