@@ -23,6 +23,7 @@ namespace TryCatchTest
                     Console.Write("Enter another number: ");
                     num2 = Convert.ToDouble(Console.ReadLine());
 
+                    //Rechenoperatoren mit switch/case
                     try
                     {
                         bool validOperator = false;
@@ -78,6 +79,7 @@ namespace TryCatchTest
                     isValid = false;
                 }
 
+                //Abfrage ob Programm beendet werden soll
                 if (isValid)
                 {
                     bool restart = false;
